@@ -9,14 +9,14 @@ export const PROJECTS = [
   {
     title: "Bayanihan Scrum - Human-in-the-Loop Workflow",
     description:
-      "Designed human-in-the-loop idea team flow for Agile teams.",
+      "Designed human-in-the-loop idea team flow for scaled Agile teams.",
     tags: ["AI", "Product", "Governance"],
     link: "https://github.com/palalabot/bayanihan-scrum",
   },
   {
-    title: "Portfolio Experience",
+    title: "Task Tracker FE",
     description:
-      "Built a focused developer portfolio with fast static rendering, responsive project cards, and a clean app-router structure.",
+      "A minimalist, mobile-responsive Linear app clone built with Next.js App Router and Tailwind CSS, featuring a clean dark-mode dashboard, kanban and list views, and meticulous micro-interactions.",
     tags: ["Next.js", "React", "Tailwind"],
     link: "https://github.com/palalabot/getjoe-dev",
   },
