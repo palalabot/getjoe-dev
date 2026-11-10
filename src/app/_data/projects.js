@@ -18,6 +18,6 @@ export const PROJECTS = [
     description:
       "A minimalist, mobile-responsive Linear app clone built with Next.js App Router and Tailwind CSS, featuring a clean dark-mode dashboard, kanban and list views, and meticulous micro-interactions.",
     tags: ["Next.js", "React", "Tailwind"],
-    link: "https://github.com/palalabot/getjoe-dev",
+    link: "https://github.com/palalabot/task-tracker-fe",
   },
 ];
