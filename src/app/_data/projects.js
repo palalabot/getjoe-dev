@@ -1,8 +1,7 @@
 export const PROJECTS = [
   {
     title: "Platform-as-a-service",
-    description:
-      "Building a low-code platform to help launch microservices.",
+    description: "Building a low-code platform to help launch microservices.",
     tags: ["Java", "PHP", "Systems"],
     link: "https://github.com/palalabot/platform-as-a-service",
   },

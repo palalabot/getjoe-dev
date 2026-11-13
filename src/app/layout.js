@@ -1,4 +1,5 @@
 import "./globals.css";
+import TerminalBackdrop from "./_components/TerminalBackdrop";
 
 export const metadata = {
   title: "Joe.dev | Senior Fullstack Engineer",
@@ -11,7 +12,8 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full bg-slate-50 text-slate-900">
+      <body className="min-h-full bg-background text-foreground">
+        <TerminalBackdrop />
         <div className="flex min-h-screen flex-col">
           <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
             <a href="/" className="text-xl font-bold tracking-tight">
@@ -21,7 +23,7 @@ export default function RootLayout({ children }) {
             <a
               href="/resume.pdf"
               download
-              className="rounded-full bg-black px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
+              className="rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition hover:bg-accent"
             >
               Download Resume
             </a>
@@ -29,7 +31,7 @@ export default function RootLayout({ children }) {
 
           <main className="flex-1">{children}</main>
 
-          <footer className="px-6 py-12 text-center text-sm text-slate-400">
+          <footer className="px-6 py-12 text-center text-sm text-muted">
             (c) {year} - Built with Next.js and Intentional Engineering
           </footer>
         </div>

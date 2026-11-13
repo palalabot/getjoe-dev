@@ -5,20 +5,20 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl px-6 py-12">
       <section className="mb-20 max-w-3xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
           Portfolio
         </p>
-        <h1 className="mb-6 text-4xl font-extrabold leading-tight text-slate-950 md:text-5xl">
+        <h1 className="mb-6 text-4xl font-extrabold leading-tight text-foreground md:text-5xl">
           Senior Fullstack Engineer.
         </h1>
 
-        <p className="text-lg leading-relaxed text-slate-600">
+        <p className="text-lg leading-relaxed text-muted">
           I architect scalable systems using{" "}
-          <strong className="font-semibold text-slate-900">
+          <strong className="font-semibold text-foreground">
             Java, PHP, and TypeScript
           </strong>
           . Currently focused on{" "}
-          <strong className="font-semibold text-slate-900">
+          <strong className="font-semibold text-foreground">
             Intentional Engineering
           </strong>
           : leveraging AI while keeping humans in control of critical systems.
@@ -26,7 +26,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="mb-8 text-2xl font-bold text-slate-950">
+        <h2 className="mb-8 text-2xl font-bold text-foreground">
           Selected Projects
         </h2>
 
