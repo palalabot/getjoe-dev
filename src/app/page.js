@@ -23,6 +23,18 @@ export default function Home() {
           </strong>
           : leveraging AI while keeping humans in control of critical systems.
         </p>
+
+        <p className="mt-6 text-sm">
+          <span className="mr-2 font-semibold uppercase tracking-[0.18em] text-muted">
+            Email
+          </span>
+          <a
+            href="mailto:hello@getjoe.dev"
+            className="font-mono text-accent hover:underline"
+          >
+            hello@getjoe.dev
+          </a>
+        </p>
       </section>
 
       <section>
