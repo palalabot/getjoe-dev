@@ -121,6 +121,7 @@ const REFERENCES = [
     "PublicAffairs.",
     "https://en.wikipedia.org/wiki/Erin_Meyer",
   ],
+  ["Kokotajlo, D. et al. AI 2027.", "", "https://ai-2027.com"],
 ];
 
 function Section({ n, title, children }) {
@@ -289,6 +290,33 @@ export default function BayanihanPage() {
           Protected branches and required approvers can also enforce the risk
           tiers in section 3.
         </p>
+      </Section>
+
+      <Section n="Appendix B" title="AI, jobs and the economy">
+        <p>
+          This appendix is the author&apos;s opinion. It is not supported by the
+          research cited above.
+        </p>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>
+            Companies can work alongside AI and keep their people. Staying
+            competitive does not require eliminating humans; it requires pairing
+            them with good tools.
+          </li>
+          <li>
+            The pressure on jobs comes mainly from the underlying economic
+            state, not from AI taking over. AI is often the stated reason rather
+            than the cause.
+          </li>
+          <li>
+            The current mood expects AI development to end in a singularity, as
+            in scenarios like AI 2027 [10]. This paper is not about models or
+            timelines. It is about keeping governance in human hands: who
+            decides, who approves, and who is accountable. Those practices
+            matter for the AI that exists today, which is useful, fallible, and
+            in need of human judgment.
+          </li>
+        </ul>
       </Section>
 
       <aside className="mt-10 border-l-2 border-line pl-5 text-[15px] leading-relaxed text-muted">
