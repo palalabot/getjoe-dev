@@ -2,8 +2,9 @@ export default function ProjectCard({ title, description, tags, link }) {
   return (
     <a
       href={link}
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(link.startsWith("/")
+        ? {}
+        : { target: "_blank", rel: "noopener noreferrer" })}
       className="group block rounded-lg border border-line bg-card p-6 shadow-sm backdrop-blur-sm transition-colors hover:border-accent"
     >
       <h3 className="mb-2 text-xl font-bold text-foreground group-hover:underline">
