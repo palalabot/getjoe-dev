@@ -72,6 +72,11 @@ const REFERENCES = [
     "martinfowler.com.",
     "https://www.martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html",
   ],
+  [
+    "Fried, J. & Heinemeier Hansson, D. (2013). Remote: Office Not Required.",
+    "Crown Business.",
+    "https://en.wikipedia.org/wiki/37signals",
+  ],
 ];
 
 function Section({ n, title, children }) {
@@ -144,7 +149,9 @@ export default function BayanihanPage() {
           assumptions should be challenged, which decisions deserve a second
           opinion. <em>Hiya</em> is redefined as shame over hiding problems, not
           over making mistakes. The principles below follow from this and from
-          psychological safety research [3].
+          psychological safety research [3]. Remote teams have to cultivate this
+          on purpose: power structures still exist at a distance, and they need
+          to align so everyone works together (see [8]).
         </p>
         <ul className="grid gap-3 font-sans sm:grid-cols-2">
           {PRINCIPLES.map(([title, text]) => (
