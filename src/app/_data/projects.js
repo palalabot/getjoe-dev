@@ -10,7 +10,7 @@ export const PROJECTS = [
     description:
       "Designed human-in-the-loop idea team flow for scaled Agile teams.",
     tags: ["AI", "Product", "Governance"],
-    link: "https://github.com/palalabot/bayanihan-scrum",
+    link: "https://github.com/palalabot/bayanihan-scrum/blob/main/HUMAN_IN_THE_LOOP.md",
   },
   {
     title: "Task Tracker FE",
