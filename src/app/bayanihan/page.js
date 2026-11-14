@@ -233,6 +233,16 @@ export default function BayanihanPage() {
         </p>
       </Section>
 
+      <aside className="mt-10 border-l-2 border-line pl-5 text-[15px] leading-relaxed text-muted">
+        <p>
+          <strong className="font-semibold text-foreground">
+            Author&apos;s note.
+          </strong>{" "}
+          The author is a software developer who has worked in Agile teams since
+          2007. The ideas here come from that practice.
+        </p>
+      </aside>
+
       <section className="mt-12 border-t border-line pt-6">
         <h2 className="mb-3 font-sans text-sm font-semibold uppercase tracking-[0.14em]">
           References
