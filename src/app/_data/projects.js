@@ -6,9 +6,9 @@ export const PROJECTS = [
     link: "https://github.com/palalabot/platform-as-a-service",
   },
   {
-    title: "Bayanihan Scrum - Human-in-the-Loop Workflow",
+    title: "Bayanihan Scrum - Collaboration-First Workflow",
     description:
-      "Designed human-in-the-loop idea team flow for scaled Agile teams.",
+      "Designed a collaboration-first team flow, with AI as an assistive tool, for scaled Agile teams.",
     tags: ["AI", "Product", "Governance"],
     link: "/bayanihan",
   },
