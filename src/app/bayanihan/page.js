@@ -57,8 +57,8 @@ const REFERENCES = [
   ],
   [
     "Edmondson, A. (1999). Psychological safety and learning behavior in work teams.",
-    "Administrative Science Quarterly, 44(2).",
-    "",
+    "Administrative Science Quarterly, 44(2), 350–383.",
+    "https://doi.org/10.2307/2666999",
   ],
   ["Hofstede, G. (1980). Culture's Consequences.", "Sage.", ""],
   ["AWS. Kiro: spec-driven development.", "", "https://kiro.dev"],
