@@ -210,7 +210,15 @@ export default function BayanihanPage() {
 
       <Section n="3" title="AI as an assistive tool">
         <p>
-          Three rules keep people in the loop without slowing them down. First,
+          A note on terms. In classic machine learning,
+          &ldquo;human-in-the-loop&rdquo; means people labeling and correcting
+          data to train a model. This paper means something different, which it
+          calls <em>collaboration-first</em>: people collaborate and decide
+          first, and AI assists them. The test is whether the team still talks,
+          questions and owns the outcome.
+        </p>
+        <p>
+          Three rules keep people in charge without slowing them down. First,
           there is no central approver: each role validates the work it owns.
           Second, review scales with risk, not volume. Formatting and
           documentation need none; architecture, security and releases need a
@@ -347,7 +355,7 @@ export default function BayanihanPage() {
         </ol>
         <p className="mt-6 font-sans text-sm">
           <a href={`${REPO}/blob/main/HUMAN_IN_THE_LOOP.md`} className={link}>
-            Full human-in-the-loop document
+            Full human-in-the-loop document (the collaboration-first workflow)
           </a>{" "}
           ·{" "}
           <a href={REPO} className={link}>
