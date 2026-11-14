@@ -4,14 +4,14 @@ Personal portfolio site of Joe Palala, a senior full-stack engineer (Java, PHP, 
 
 ## Stack
 
-Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript (no TypeScript). Lint and format with Biome.
+Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript (no TypeScript). Lint with Biome, format with Prettier.
 
 ## Commands
 
 - `npm run dev`: dev server
 - `npm run build`: production build (run before committing)
-- `npm run lint`: Biome check
-- `npm run format`: Biome format
+- `npm run lint`: Biome lint
+- `npm run format`: Prettier (2-space indent); `npm run format:check` to verify
 
 ## Layout
 

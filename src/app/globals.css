@@ -94,7 +94,8 @@ body {
       to bottom,
       transparent 0 2px,
       var(--scanline) 2px 3px
-    ), radial-gradient(ellipse at 50% 40%, var(--vignette) 0%, transparent 75%);
+    ),
+    radial-gradient(ellipse at 50% 40%, var(--vignette) 0%, transparent 75%);
 }
 
 @keyframes terminal-scroll {
