@@ -1,0 +1,108 @@
+{
+  "name": "Jose Palala",
+  "title": "Senior Full-Stack Engineer & Technical Lead",
+  "location": "Metro Manila, Philippines",
+  "email": "joe@palala.dev",
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/jpalala" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/joepalala" }
+  ],
+  "summary": "Senior Full-Stack Engineer and Technical Lead with 19+ years of experience delivering SaaS, e-commerce, HR, and financial systems. Leads teams, modernizes platforms, and turns business requirements into scalable technical solutions.",
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["Java", "Python", "PHP", "TypeScript", "JavaScript"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React", "Next.js", "Angular", "SvelteJS", "Storybook"]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        "Spring Boot",
+        "Quarkus",
+        "Symfony",
+        "Laravel",
+        "Node.js",
+        "NestJS",
+        "REST APIs"
+      ]
+    },
+    {
+      "category": "Cloud & Data",
+      "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Snowflake", "Tableau"]
+    },
+    {
+      "category": "Leadership",
+      "items": [
+        "Technical Leadership",
+        "Mentoring",
+        "Agile Delivery",
+        "Solution Design",
+        "MVP Development"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Myridius",
+      "role": "Tech Lead Developer",
+      "start": "Oct 2025",
+      "end": "Apr 2026",
+      "highlights": [
+        "Led the SDLC for enterprise e-commerce apps, turning business goals into technical roadmaps.",
+        "Technical lead for a new small team building a security-focused Shopify App in Java and JavaScript."
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "Node.js",
+        "Next.js",
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "company": "EnablesGroup",
+      "role": "PHP and React Developer",
+      "start": "Feb 2025",
+      "end": "Aug 2025",
+      "highlights": [
+        "Sped up a major winery Shopify storefront with Next.js.",
+        "Built a reservations platform integrated with American Express and embedded SvelteJS widgets."
+      ],
+      "skills": ["Python", "PHP", "Symfony", "Next.js", "SvelteJS", "AWS"]
+    },
+    {
+      "company": "Gappify",
+      "role": "Software Engineer",
+      "start": "Feb 2023",
+      "end": "Feb 2025",
+      "highlights": [
+        "Doubled real-time data ingestion speed with Laravel and AWS Lambda.",
+        "Maintained business-critical microservices in PHP and Java (Quarkus / Spring), with React dashboards."
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "PHP",
+        "Laravel",
+        "React",
+        "Snowflake",
+        "AWS Lambda"
+      ]
+    }
+  ],
+  "earlier": "Earlier: HeroTeams (Frontend Engineer), Willis Towers Watson (UI Developer), Cognizant (Full-Stack Node Developer), 2014–2022. Full history in the CV.",
+  "education": [
+    {
+      "degree": "BS Management Information Systems",
+      "school": "Ateneo De Manila University"
+    }
+  ],
+  "speaking": [
+    "PHPConf Asia 2018: open-source community integration and CMS frameworks"
+  ]
+}

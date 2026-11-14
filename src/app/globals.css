@@ -111,3 +111,19 @@ body {
     animation: none;
   }
 }
+
+/* ---------- Print (resume "Save as PDF") ---------- */
+
+@page {
+  margin: 0.5in;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .terminal-backdrop {
+    display: none;
+  }
+}
