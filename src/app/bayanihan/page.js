@@ -44,6 +44,45 @@ const PHASES = [
   ],
 ];
 
+const PRACTICES = [
+  [
+    "GitOps",
+    "Git is the single source of truth. Every change, from a person or an AI, arrives as a reviewed pull request, so history shows who decided what and a bad change can be reverted.",
+  ],
+  [
+    "DevSecOps",
+    "Security checks run automatically with every change: dependency, secret and static analysis scans, alongside the tests.",
+  ],
+  [
+    "Continuous integration and delivery (CI/CD)",
+    "Each change is built, tested and packaged by an automated pipeline, and released in small, frequent steps.",
+  ],
+  [
+    "Automated testing",
+    "Unit, integration and end-to-end tests, often written first (TDD) or from acceptance criteria (BDD), define what correct means independently of who wrote the code.",
+  ],
+  [
+    "Code review",
+    "A teammate reads each change before it merges, checking design, readability and risk. It is also how knowledge spreads.",
+  ],
+  [
+    "Infrastructure as code",
+    "Servers, networks and environments are described in versioned files, so they can be reviewed, reproduced and rebuilt.",
+  ],
+  [
+    "Observability",
+    "Logs, metrics and traces show what a running system is doing, so problems are found and explained quickly.",
+  ],
+  [
+    "Feature flags",
+    "New behavior ships switched off and is enabled gradually, so a release can be reversed without a redeploy.",
+  ],
+  [
+    "Architecture decision records",
+    "Short notes record what was decided and why, so later readers, human or AI, do not have to guess.",
+  ],
+];
+
 const REFERENCES = [
   [
     "Lokalisadong Scrum.",
@@ -230,6 +269,25 @@ export default function BayanihanPage() {
           This is a proposal. It has not been tested across teams, and there are
           no metrics yet. Risk tiers and role boundaries will need tuning in
           practice.
+        </p>
+      </Section>
+
+      <Section n="Appendix A" title="Supporting practices">
+        <p>
+          Short descriptions of delivery practices that keep AI-assisted work
+          traceable, tested and reversible instead of vibe-coded.
+        </p>
+        <dl className="space-y-3">
+          {PRACTICES.map(([term, text]) => (
+            <div key={term}>
+              <dt className="inline font-semibold">{term}. </dt>
+              <dd className="inline text-muted">{text}</dd>
+            </div>
+          ))}
+        </dl>
+        <p>
+          Protected branches and required approvers can also enforce the risk
+          tiers in section 3.
         </p>
       </Section>
 
