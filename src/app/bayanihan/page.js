@@ -77,6 +77,11 @@ const REFERENCES = [
     "Crown Business.",
     "https://en.wikipedia.org/wiki/37signals",
   ],
+  [
+    "Meyer, E. (2014). The Culture Map: Breaking Through the Invisible Boundaries of Global Business.",
+    "PublicAffairs.",
+    "https://en.wikipedia.org/wiki/Erin_Meyer",
+  ],
 ];
 
 function Section({ n, title, children }) {
@@ -132,9 +137,9 @@ export default function BayanihanPage() {
         <p>
           The Scrum Guide assumes team members are comfortable speaking in
           public, challenging estimates and questioning authority. In
-          organizations with high power distance [4], silence is often read as
-          agreement, QA softens feedback, and juniors defer to seniors. Feedback
-          arrives late and quality suffers.
+          organizations with high power distance [4][9], silence is often read
+          as agreement, QA softens feedback, and juniors defer to seniors.
+          Feedback arrives late and quality suffers.
         </p>
         <p>
           Adding AI raises a second problem. If one person must approve every AI
@@ -151,7 +156,7 @@ export default function BayanihanPage() {
           over making mistakes. The principles below follow from this and from
           psychological safety research [3]. Remote teams have to cultivate this
           on purpose: power structures still exist at a distance, and they need
-          to align so everyone works together (see [8]).
+          to align so everyone works together (see [8], [9]).
         </p>
         <ul className="grid gap-3 font-sans sm:grid-cols-2">
           {PRINCIPLES.map(([title, text]) => (
