@@ -20,6 +20,8 @@ const JSON_LD = [
 ];
 
 const COMPANIES = [
+  { name: "HeroTeams" },
+  { name: "Gappify" },
   { name: "EnablesGroup" },
   { name: "Myridius" },
   { name: "Stratpoint", current: true },
