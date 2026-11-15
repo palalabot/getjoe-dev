@@ -3,6 +3,7 @@
 
 /**
  * @typedef {object} Project
+ * @property {"built" | "community"} category "built" for hands-on technical work, "community" for writing, community and research.
  * @property {string} title
  * @property {string} description
  * @property {string[]} tags

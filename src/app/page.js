@@ -42,6 +42,11 @@ const SECTIONS = [
   ],
 ];
 
+// Card groups, shown in this order with a divider between them:
+// things built and run first, then writing, community and research.
+/** @type {("built" | "community")[]} */
+const PROJECT_GROUPS = ["built", "community"];
+
 const SKILLS = [
   [
     "Full-stack development",
@@ -161,11 +166,18 @@ export default function Home() {
           Selected Projects
         </h2>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {PROJECTS.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
-        </div>
+        {PROJECT_GROUPS.map((category, i) => (
+          <div key={category}>
+            {i > 0 && <hr className="my-10 border-line" />}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {PROJECTS.filter((p) => p.category === category).map(
+                ({ category: _category, ...project }) => (
+                  <ProjectCard key={project.title} {...project} />
+                ),
+              )}
+            </div>
+          </div>
+        ))}
       </section>
     </div>
   );

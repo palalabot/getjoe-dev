@@ -1,7 +1,7 @@
 const CARD =
   "group block rounded-lg border border-line bg-card p-6 shadow-sm backdrop-blur-sm transition-colors";
 
-/** @param {import("../_data/types").Project} props */
+/** @param {Omit<import("../_data/types").Project, "category">} props */
 export default function ProjectCard({ title, description, tags, link }) {
   const body = (
     <>
