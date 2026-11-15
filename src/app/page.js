@@ -19,7 +19,11 @@ const JSON_LD = [
   },
 ];
 
-const COMPANIES = ["EnablesGroup", "Myridius", "Stratpoint"];
+const COMPANIES = [
+  { name: "EnablesGroup" },
+  { name: "Myridius" },
+  { name: "Stratpoint", current: true },
+];
 
 const SECTIONS = [
   ["Resume", "My one-page CV, also available as JSON", "/resume"],
@@ -111,15 +115,20 @@ export default function Home() {
 
       <section className="mb-20">
         <h2 className="mb-4 text-2xl font-bold text-foreground">
-          Companies I&apos;ve Worked With
+          Where I&apos;ve Worked
         </h2>
         <ul className="flex flex-wrap gap-3">
-          {COMPANIES.map((name) => (
+          {COMPANIES.map(({ name, current }) => (
             <li
               key={name}
               className="rounded-full border border-line bg-card px-4 py-1.5 text-sm font-semibold text-foreground"
             >
               {name}
+              {current && (
+                <span className="ml-2 text-xs font-medium text-accent">
+                  current
+                </span>
+              )}
             </li>
           ))}
         </ul>
