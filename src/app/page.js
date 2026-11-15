@@ -48,7 +48,7 @@ const SKILLS = [
     "Node.js and React, with some Java, on Shopify and SaaS systems",
   ],
   ["Linux and Docker", "Server setup, containers and deployments"],
-  ["Network setup", "Getting services connected and reachable"],
+  ["Network setup", "Basic LAN setup: routers, Wi-Fi and pfSense"],
 ];
 
 export default function Home() {
@@ -73,8 +73,8 @@ export default function Home() {
           <strong className="font-semibold text-foreground">
             Node.js, React, and some Java
           </strong>{" "}
-          on Shopify and SaaS systems, and I set up the Linux, Docker and
-          network side they run on. Agile and AI-assisted delivery are side
+          on Shopify and SaaS systems. I am also comfortable with Linux, Docker
+          and basic network setup. Agile and AI-assisted delivery are side
           interests I research and write about.
         </p>
 
