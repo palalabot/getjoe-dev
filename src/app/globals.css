@@ -162,9 +162,10 @@ body {
   background: var(--win-max);
 }
 
+/* Moved by TerminalBackdrop.jsx as the page scrolls (parallax). */
 .terminal-backdrop__scroll {
   padding-top: 2rem;
-  animation: terminal-scroll 90s linear infinite;
+  will-change: transform;
 }
 
 .terminal-backdrop__text {
@@ -192,15 +193,6 @@ body {
   );
 }
 
-@keyframes terminal-scroll {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50%);
-  }
-}
-
 /* Small screens: the window takes most of the width, with a gentler tilt. */
 @media (max-width: 768px) {
   .terminal-backdrop {
@@ -216,10 +208,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .terminal-backdrop__scroll {
-    animation: none;
-  }
-
   .logo-3d,
   .logo-3d:hover {
     transition: none;
