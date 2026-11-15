@@ -85,14 +85,18 @@ export default function ResumePage() {
                     {job.start} – {job.end}
                   </span>
                 </div>
-                <ul className="mt-1 list-disc space-y-0.5 pl-5">
-                  {job.highlights.map((h) => (
-                    <li key={h}>{h}</li>
-                  ))}
-                </ul>
-                <p className="mt-1 text-sm text-neutral-500">
-                  {job.skills.join(" · ")}
-                </p>
+                {job.highlights.length > 0 && (
+                  <ul className="mt-1 list-disc space-y-0.5 pl-5">
+                    {job.highlights.map((h) => (
+                      <li key={h}>{h}</li>
+                    ))}
+                  </ul>
+                )}
+                {job.skills.length > 0 && (
+                  <p className="mt-1 text-sm text-neutral-500">
+                    {job.skills.join(" · ")}
+                  </p>
+                )}
               </div>
             ))}
           </div>
