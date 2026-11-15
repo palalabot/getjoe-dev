@@ -1,15 +1,7 @@
 /** @type {import("./types").Project[]} */
 export const PROJECTS = [
   {
-    category: "built",
-    title: "ZulitLabs (demo)",
-    description:
-      "A demo site for a small web maintenance service: static HTML, a Vercel function and a Turnstile-protected contact form that emails through Resend. Not an active business.",
-    tags: ["Demo", "Vanilla JS", "Vercel", "Resend"],
-    link: "https://www.zulitlabs.com/",
-  },
-  {
-    category: "built",
+    category: "project",
     title: "Task Tracker FE",
     description:
       "A minimalist, mobile-responsive Linear app clone built with Next.js App Router and Tailwind CSS, featuring a clean dark-mode dashboard, kanban and list views, and meticulous micro-interactions.",
@@ -17,28 +9,36 @@ export const PROJECTS = [
     link: "https://task-tracker-fe-wine.vercel.app/",
   },
   {
-    category: "built",
-    title: "LAMP servers for a nonprofit",
+    category: "project",
+    title: "ZulitLabs (demo)",
     description:
-      "Managed LAMP servers (Linux, Apache, MySQL, PHP) for a nonprofit. This is where my liking for Linux comes from.",
-    tags: ["Linux", "LAMP", "Servers"],
+      "A demo site for a small web maintenance service: static HTML, a Vercel function and a Turnstile-protected contact form that emails through Resend. Not an active business.",
+    tags: ["Demo", "Vanilla JS", "Vercel", "Resend"],
+    link: "https://www.zulitlabs.com/",
   },
   {
-    category: "community",
+    category: "hobby",
     title: "Blogging the PH startup scene",
     description:
       "I used to write about the Philippine startup scene. It went quiet, and I did not continue after 2014.",
     tags: ["Writing", "Startups", "Philippines"],
   },
   {
-    category: "community",
+    category: "hobby",
     title: "Tech community",
     description:
       "I take part in the local tech community and am an enthusiastic member of the AWS community in the Philippines.",
     tags: ["Community", "AWS"],
   },
   {
-    category: "community",
+    category: "hobby",
+    title: "LAMP servers for a nonprofit",
+    description:
+      "Managed LAMP servers (Linux, Apache, MySQL, PHP) for a nonprofit. This is where my liking for Linux comes from.",
+    tags: ["Linux", "LAMP", "Servers"],
+  },
+  {
+    category: "hobby",
     title: "Research: Bayanihan Scrum",
     description:
       "Research notes on a collaboration-first team flow, with AI as an assistive tool, for Agile teams. A proposal, not tested across teams.",

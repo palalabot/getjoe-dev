@@ -42,10 +42,12 @@ const SECTIONS = [
   ],
 ];
 
-// Card groups, shown in this order with a divider between them:
-// things built and run first, then writing, community and research.
-/** @type {("built" | "community")[]} */
-const PROJECT_GROUPS = ["built", "community"];
+// Card sections in page order: linked projects first, then hobbies.
+/** @type {["project" | "hobby", string][]} */
+const PROJECT_GROUPS = [
+  ["project", "Selected Projects"],
+  ["hobby", "Hobbies"],
+];
 
 const SKILLS = [
   [
@@ -163,24 +165,23 @@ export default function Home() {
         </ul>
       </section>
 
-      <section id="projects" className="scroll-mt-8">
-        <h2 className="mb-8 text-2xl font-bold text-foreground">
-          Selected Projects
-        </h2>
+      {PROJECT_GROUPS.map(([category, heading], i) => (
+        <section
+          key={category}
+          id={i === 0 ? "projects" : undefined}
+          className={`scroll-mt-8 ${i === 0 ? "mb-20" : ""}`}
+        >
+          <h2 className="mb-8 text-2xl font-bold text-foreground">{heading}</h2>
 
-        {PROJECT_GROUPS.map((category, i) => (
-          <div key={category}>
-            {i > 0 && <hr className="my-10 border-line" />}
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {PROJECTS.filter((p) => p.category === category).map(
-                ({ category: _category, ...project }) => (
-                  <ProjectCard key={project.title} {...project} />
-                ),
-              )}
-            </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {PROJECTS.filter((p) => p.category === category).map(
+              ({ category: _category, ...project }) => (
+                <ProjectCard key={project.title} {...project} />
+              ),
+            )}
           </div>
-        ))}
-      </section>
+        </section>
+      ))}
     </div>
   );
 }
