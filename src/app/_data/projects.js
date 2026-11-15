@@ -8,17 +8,17 @@ export const PROJECTS = [
     link: "https://www.zulitlabs.com/",
   },
   {
-    title: "Bayanihan Scrum: AI-assisted SDLC Workflow",
-    description:
-      "Designed a collaboration-first team flow, with AI as an assistive tool, for scaled Agile teams.",
-    tags: ["AI", "Product", "Governance"],
-    link: "/bayanihan",
-  },
-  {
     title: "Task Tracker FE",
     description:
       "A minimalist, mobile-responsive Linear app clone built with Next.js App Router and Tailwind CSS, featuring a clean dark-mode dashboard, kanban and list views, and meticulous micro-interactions.",
     tags: ["Next.js", "React", "Tailwind"],
     link: "https://task-tracker-fe-wine.vercel.app/",
+  },
+  {
+    title: "Research: Bayanihan Scrum",
+    description:
+      "Research notes on a collaboration-first team flow, with AI as an assistive tool, for Agile teams. A proposal, not tested across teams.",
+    tags: ["Research", "Agile", "AI"],
+    link: "/bayanihan",
   },
 ];

@@ -31,15 +31,24 @@ const SECTIONS = [
   ["Resume", "My one-page CV, also available as JSON", "/resume"],
   ["Projects", "Selected things I've built", "#projects"],
   [
-    "AI-assisted SDLC",
-    "How I approach AI across the software lifecycle: specs, review, tests",
+    "Research: AI-assisted SDLC",
+    "Notes on using AI across the software lifecycle: specs, review, tests",
     "/ai-assisted-sdlc",
   ],
   [
-    "Bayanihan Scrum",
-    "A collaboration-first, AI-assisted workflow I wrote up",
+    "Research: Bayanihan Scrum",
+    "A side interest: notes on Agile for teams that work with AI",
     "/bayanihan",
   ],
+];
+
+const SKILLS = [
+  [
+    "Full-stack development",
+    "Node.js and React, with some Java, on Shopify and SaaS systems",
+  ],
+  ["Linux and Docker", "Server setup, containers and deployments"],
+  ["Network setup", "Getting services connected and reachable"],
 ];
 
 export default function Home() {
@@ -64,19 +73,15 @@ export default function Home() {
           <strong className="font-semibold text-foreground">
             Node.js, React, and some Java
           </strong>{" "}
-          on Shopify and SaaS systems. I focus on how teams build with AI across
-          the lifecycle: specs, design, review, testing and release, with a
-          person accountable at each step.
+          on Shopify and SaaS systems, and I set up the Linux, Docker and
+          network side they run on. Agile and AI-assisted delivery are side
+          interests I research and write about.
         </p>
 
         <p className="mt-4 text-base text-muted">
           Read{" "}
           <a href="/resume" className="text-accent hover:underline">
             Joe Palala&apos;s resume
-          </a>{" "}
-          or{" "}
-          <a href="/bayanihan" className="text-accent hover:underline">
-            Bayanihan Scrum, a collaboration-first workflow
           </a>
           .
         </p>
@@ -110,6 +115,21 @@ export default function Home() {
                 </span>
                 <span className="block text-sm text-muted">{text}</span>
               </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">What I Do</h2>
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {SKILLS.map(([title, text]) => (
+            <li
+              key={title}
+              className="rounded-lg border border-line bg-card p-5 backdrop-blur-sm"
+            >
+              <p className="font-semibold text-foreground">{title}</p>
+              <p className="mt-1 text-sm text-muted">{text}</p>
             </li>
           ))}
         </ul>
