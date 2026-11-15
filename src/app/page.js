@@ -64,9 +64,9 @@ export default function Home() {
           <strong className="font-semibold text-foreground">
             Node.js, React, and some Java
           </strong>{" "}
-          on e-commerce and SaaS systems. I focus on how teams build with AI
-          across the lifecycle: specs, design, review, testing and release, with
-          a person accountable at each step.
+          on Shopify and SaaS systems. I focus on how teams build with AI across
+          the lifecycle: specs, design, review, testing and release, with a
+          person accountable at each step.
         </p>
 
         <p className="mt-4 text-base text-muted">
