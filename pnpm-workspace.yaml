@@ -1,3 +1,2 @@
-pmOnFail: error
 allowBuilds:
   sharp: true
