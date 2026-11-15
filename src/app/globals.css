@@ -25,9 +25,12 @@
   --logo-depth: #06461f;
 }
 
-/* Dark theme: black terminal, phosphor-green text */
+/* Dark theme: black terminal, phosphor-green text.
+   The theme switcher sets `data-theme` on <html>. Without a choice, the
+   system setting decides. The same tokens are listed twice because plain CSS
+   cannot share one block between a media query and an attribute selector. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #050806;
     --foreground: #d8f5df;
     --muted: #8aa594;
@@ -49,6 +52,52 @@
     --win-max: #39ff7a;
     --logo-depth: #0f6b33;
   }
+}
+
+:root[data-theme="dark"] {
+  --background: #050806;
+  --foreground: #d8f5df;
+  --muted: #8aa594;
+  --card: rgb(8 16 10 / 0.7);
+  --line: #1f3a28;
+  --chip: rgb(57 255 122 / 0.08);
+  --accent: #39ff7a;
+
+  --term-fg: #39ff7a;
+  --term-opacity: 0.6;
+  --term-blur: 0px;
+  --term-glow: 0 0 6px rgb(57 255 122 / 0.6);
+  --scanline: rgb(0 0 0 / 0.35);
+
+  --win-bar: #0c1710;
+  --win-depth: #12281a;
+  --win-close: #ff6b61;
+  --win-min: #f2c744;
+  --win-max: #39ff7a;
+  --logo-depth: #0f6b33;
+}
+
+/* Theme switcher: show the moon in light mode, the sun in dark mode. */
+.theme-toggle__sun {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle__sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle__moon {
+    display: none;
+  }
+}
+
+:root[data-theme="dark"] .theme-toggle__sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle__moon {
+  display: none;
 }
 
 @theme inline {
