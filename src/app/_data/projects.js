@@ -15,6 +15,24 @@ export const PROJECTS = [
     link: "https://task-tracker-fe-wine.vercel.app/",
   },
   {
+    title: "LAMP servers for a nonprofit",
+    description:
+      "Managed LAMP servers (Linux, Apache, MySQL, PHP) for a nonprofit. This is where my liking for Linux comes from.",
+    tags: ["Linux", "LAMP", "Servers"],
+  },
+  {
+    title: "Blogging the PH startup scene",
+    description:
+      "I used to write about the Philippine startup scene. It went quiet, and I did not continue after 2014.",
+    tags: ["Writing", "Startups", "Philippines"],
+  },
+  {
+    title: "Tech community",
+    description:
+      "I take part in the local tech community and am an enthusiastic member of the AWS community in the Philippines.",
+    tags: ["Community", "AWS"],
+  },
+  {
     title: "Research: Bayanihan Scrum",
     description:
       "Research notes on a collaboration-first team flow, with AI as an assistive tool, for Agile teams. A proposal, not tested across teams.",

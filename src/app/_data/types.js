@@ -6,7 +6,7 @@
  * @property {string} title
  * @property {string} description
  * @property {string[]} tags
- * @property {string} link Internal path ("/bayanihan") or full external URL.
+ * @property {string} [link] Internal path ("/bayanihan") or full external URL. Omit when there is nothing to link to.
  */
 
 /**
