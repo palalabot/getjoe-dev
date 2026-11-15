@@ -1,7 +1,19 @@
 export const metadata = {
-  title: "Bayanihan Scrum | Joe.dev",
+  title: "Bayanihan Scrum: Collaboration-First Workflow | Joe Palala",
   description:
-    "A working paper on human-led, AI-assisted Agile, built on Filipino team culture.",
+    "Bayanihan Scrum is a collaboration-first, human-led, AI-assisted Agile workflow built on Filipino team culture, by Joe Palala.",
+  alternates: { canonical: "/bayanihan" },
+  openGraph: { type: "article", url: "/bayanihan" },
+};
+
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Bayanihan Scrum: Collaboration-First Workflow",
+  author: { "@type": "Person", name: "Joe Palala", url: "https://getjoe.dev" },
+  datePublished: "2026-11-14",
+  dateModified: "2026-11-15", // update when content changes
+  mainEntityOfPage: "https://getjoe.dev/bayanihan",
 };
 
 const REPO = "https://github.com/palalabot/bayanihan-scrum";
@@ -140,6 +152,11 @@ const link = "text-accent underline underline-offset-2";
 export default function BayanihanPage() {
   return (
     <article className="mx-auto w-full max-w-2xl px-6 py-10 font-serif text-[17px] leading-[1.75]">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD, no user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
       <a
         href="/"
         className="font-sans text-sm text-muted transition hover:text-accent"
@@ -152,10 +169,14 @@ export default function BayanihanPage() {
           Bayanihan Scrum
         </h1>
         <p className="mt-2 text-lg italic text-muted">
-          Human-led, AI-assisted Agile for Filipino software teams
+          Collaboration-first, human-led, AI-assisted Agile for Filipino
+          software teams
         </p>
         <p className="mt-4 font-sans text-sm text-muted">
-          Joe Palala · Working paper · 2026
+          <a href="/" className="hover:text-accent">
+            Joe Palala
+          </a>{" "}
+          · Working paper · 2026
         </p>
       </header>
 

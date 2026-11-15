@@ -1,10 +1,29 @@
 import "./globals.css";
 import TerminalBackdrop from "./_components/TerminalBackdrop";
 
+const TITLE = "Joe Palala | Senior Full-Stack Engineer";
+const DESCRIPTION =
+  "Joe Palala is a senior full-stack engineer working in Java, PHP and TypeScript. See selected projects and his resume.";
+
 export const metadata = {
-  title: "Joe.dev | Senior Fullstack Engineer",
-  description:
-    "Portfolio for Joe, a senior fullstack engineer focused on scalable systems and intentional engineering.",
+  metadataBase: new URL("https://getjoe.dev"),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    siteName: "Joe Palala",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@joepalaladev",
+    creator: "@joepalaladev",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({ children }) {
