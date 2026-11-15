@@ -3,7 +3,7 @@ import TerminalBackdrop from "./_components/TerminalBackdrop";
 
 const TITLE = "Joe Palala | Senior Full-Stack Engineer";
 const DESCRIPTION =
-  "Joe Palala is a senior full-stack engineer working in Node.js, React and Java. See selected projects and his resume.";
+  "Joe Palala is a senior full-stack engineer in Metro Manila, Philippines, working in Node.js, React and Java. See selected projects and his resume.";
 
 /** @type {import("next").Metadata} */
 export const metadata = {

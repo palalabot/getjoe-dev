@@ -59,8 +59,8 @@ export default function Home() {
         </h1>
 
         <p className="text-lg leading-relaxed text-muted">
-          Hi, I&apos;m Joe, a senior full-stack engineer from Metro Manila. I
-          work in{" "}
+          Hi, I&apos;m Joe, a senior full-stack engineer from Metro Manila,
+          Philippines. I work in{" "}
           <strong className="font-semibold text-foreground">
             Node.js, React, and some Java
           </strong>{" "}
