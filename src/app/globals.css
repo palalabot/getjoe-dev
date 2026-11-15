@@ -11,8 +11,8 @@
   --accent: #0a7a35;
 
   --term-fg: #0b8f3a;
-  --term-opacity: 0.16;
-  --term-blur: 1.6px;
+  --term-opacity: 0.55;
+  --term-blur: 0px;
   --term-glow: 0 0 0 transparent;
   --scanline: rgb(15 26 18 / 0.04);
 
@@ -37,8 +37,8 @@
     --accent: #39ff7a;
 
     --term-fg: #39ff7a;
-    --term-opacity: 0.22;
-    --term-blur: 1.4px;
+    --term-opacity: 0.6;
+    --term-blur: 0px;
     --term-glow: 0 0 6px rgb(57 255 122 / 0.6);
     --scanline: rgb(0 0 0 / 0.35);
 
@@ -193,6 +193,20 @@ body {
   );
 }
 
+/* Wider screens: keep the hero text clear of the terminal window beside it.
+   Available width = window's left edge minus the page container's left edge. */
+@media (min-width: 769px) {
+  .hero-beside-terminal {
+    max-width: min(
+      48rem,
+      calc(
+        100vw - 4vw - min(42vw, 600px) -
+          max(1.5rem, (100vw - 72rem) / 2 + 1.5rem) - 1.5rem
+      )
+    );
+  }
+}
+
 /* Small screens: the window takes most of the width, with a gentler tilt. */
 @media (max-width: 768px) {
   .terminal-backdrop {
@@ -204,6 +218,12 @@ body {
     box-shadow: 6px 6px 0 0 var(--win-depth);
     transform: perspective(1000px) rotateX(4deg);
     transform-origin: center top;
+  }
+
+  /* The page text sits on top of the window here, so keep the terminal faint. */
+  .terminal-backdrop__text {
+    opacity: 0.18;
+    filter: blur(1px);
   }
 }
 

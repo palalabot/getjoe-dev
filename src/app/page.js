@@ -64,7 +64,7 @@ export default function Home() {
         // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD, no user input
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
       />
-      <section className="mb-20 max-w-3xl">
+      <section className="hero-beside-terminal mb-20 max-w-3xl">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
           Portfolio
         </p>
