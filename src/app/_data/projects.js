@@ -1,3 +1,4 @@
+/** @type {import("./types").Project[]} */
 export const PROJECTS = [
   {
     title: "ZulitLabs (demo)",

@@ -1,5 +1,6 @@
 import resume from "../_data/resume.json";
 
+/** @type {import("next").Metadata} */
 export const metadata = {
   title: "Joe Palala | Resume",
   description:
@@ -8,6 +9,7 @@ export const metadata = {
   alternates: { canonical: "/resume" },
 };
 
+/** @param {{ title: string, children: import("react").ReactNode }} props */
 function Section({ title, children }) {
   return (
     <section className="mt-6">
@@ -20,6 +22,7 @@ function Section({ title, children }) {
 }
 
 export default function ResumePage() {
+  /** @type {import("../_data/types").Resume} */
   const r = resume;
 
   return (

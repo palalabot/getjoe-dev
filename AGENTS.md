@@ -4,13 +4,14 @@ Personal portfolio site of Joe Palala, a senior full-stack engineer (Java, PHP, 
 
 ## Stack
 
-Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript (no TypeScript). Lint with Biome, format with Prettier.
+Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript with JSDoc types, checked by `tsc` (no `.ts` files). Lint with Biome, format with Prettier.
 
 ## Commands
 
 - `pnpm dev`: dev server
 - `pnpm build`: production build (run before committing)
 - `pnpm lint`: Biome lint
+- `pnpm typecheck`: `tsc` over the JSDoc types (strict, `checkJs`); run it with the build before committing
 - `pnpm format`: Prettier (2-space indent); `pnpm format:check` to verify
 
 ## Layout
@@ -24,7 +25,8 @@ Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript (
 
 ## Conventions
 
-- Content lives in `_data/`. Edit `resume.json` or `projects.js`, not the pages.
+- Content lives in `_data/`. Edit `resume.json` or `projects.js`, not the pages. Their shapes are typed in `_data/types.js`; `pnpm typecheck` fails if the content does not match.
+- Add JSDoc types to new components, props and data (`@param`, `@type`, `@typedef`). Keep files as `.js`/`.jsx`.
 - The nav "Download Resume" button opens `/resume?download=1`, which triggers the browser print dialog (Save as PDF). Keep the resume print-friendly and on one page.
 - Keep the design minimal and readable. Use the theme tokens in `globals.css`, not hard-coded colors, except on the resume page, which is intentionally plain white.
 - No phone number or home address in `resume.json`. The file is served publicly.

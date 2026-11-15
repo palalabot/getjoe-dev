@@ -1,6 +1,13 @@
 "use server";
 
+/** @typedef {{ ok: boolean, message: string }} ContactState */
+
 // Forwards every form field to CONTACT_API_URL (full endpoint URL, set in .env).
+/**
+ * @param {ContactState | null} _prev
+ * @param {FormData} formData
+ * @returns {Promise<ContactState>}
+ */
 export async function sendContact(_prev, formData) {
   const url = process.env.CONTACT_API_URL;
   if (!url) return { ok: false, message: "Contact form is not configured." };

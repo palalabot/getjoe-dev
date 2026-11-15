@@ -5,6 +5,7 @@ const TITLE = "Joe Palala | Senior Full-Stack Engineer";
 const DESCRIPTION =
   "Joe Palala is a senior full-stack engineer working in Node.js, React and Java. See selected projects and his resume.";
 
+/** @type {import("next").Metadata} */
 export const metadata = {
   metadataBase: new URL("https://getjoe.dev"),
   title: TITLE,
@@ -26,6 +27,7 @@ export const metadata = {
   },
 };
 
+/** @param {{ children: import("react").ReactNode }} props */
 export default function RootLayout({ children }) {
   const year = new Date().getFullYear();
 

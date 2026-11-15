@@ -1,3 +1,4 @@
+/** @type {import("next").Metadata} */
 export const metadata = {
   title: "AI-assisted SDLC | Joe Palala",
   description:

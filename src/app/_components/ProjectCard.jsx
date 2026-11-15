@@ -1,3 +1,4 @@
+/** @param {import("../_data/types").Project} props */
 export default function ProjectCard({ title, description, tags, link }) {
   return (
     <a

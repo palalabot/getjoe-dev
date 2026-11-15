@@ -13,7 +13,9 @@ export default function TerminalBackdrop() {
     fetch("/terminal.json")
       .then((r) => r.json())
       // Repeat so one copy is taller than any viewport.
-      .then((lines) => setText(Array(4).fill(lines.join("\n")).join("\n")))
+      .then((/** @type {string[]} */ lines) =>
+        setText(Array(4).fill(lines.join("\n")).join("\n")),
+      )
       .catch(() => {});
   }, []);
 

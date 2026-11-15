@@ -1,3 +1,4 @@
+/** @type {import("next").Metadata} */
 export const metadata = {
   title: "Bayanihan Scrum: Collaboration-First Workflow | Joe Palala",
   description:
@@ -136,6 +137,7 @@ const REFERENCES = [
   ["Kokotajlo, D. et al. AI 2027.", "", "https://ai-2027.com"],
 ];
 
+/** @param {{ n: string, title: string, children: import("react").ReactNode }} props */
 function Section({ n, title, children }) {
   return (
     <section className="mt-10">

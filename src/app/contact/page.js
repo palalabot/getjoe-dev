@@ -1,5 +1,6 @@
 import ContactForm from "./ContactForm";
 
+/** @type {import("next").Metadata} */
 export const metadata = {
   title: "Contact Joe Palala | Senior Full-Stack Engineer",
   description:
