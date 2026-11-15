@@ -17,6 +17,14 @@ export const PROJECTS = [
     link: "https://www.zulitlabs.com/",
   },
   {
+    category: "project",
+    title: "Research: Bayanihan Scrum",
+    description:
+      "Research notes on a collaboration-first team flow, with AI as an assistive tool, for Agile teams. A proposal, not tested across teams.",
+    tags: ["Research", "Agile", "AI"],
+    link: "/bayanihan",
+  },
+  {
     category: "hobby",
     title: "Blogging the PH startup scene",
     description:
@@ -36,13 +44,5 @@ export const PROJECTS = [
     description:
       "Managed LAMP servers (Linux, Apache, MySQL, PHP) for a nonprofit. This is where my liking for Linux comes from.",
     tags: ["Linux", "LAMP", "Servers"],
-  },
-  {
-    category: "hobby",
-    title: "Research: Bayanihan Scrum",
-    description:
-      "Research notes on a collaboration-first team flow, with AI as an assistive tool, for Agile teams. A proposal, not tested across teams.",
-    tags: ["Research", "Agile", "AI"],
-    link: "/bayanihan",
   },
 ];
