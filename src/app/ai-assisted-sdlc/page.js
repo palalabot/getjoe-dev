@@ -77,8 +77,20 @@ export default function AiAssistedSdlcPage() {
       <aside className="mt-10 border-l-2 border-line pl-5 text-[15px] leading-relaxed text-muted">
         <p>
           <strong className="font-semibold text-foreground">Status.</strong>{" "}
-          These ideas are a proposal I have written up. They have not been
-          tested across teams, and there are no metrics yet.
+          These ideas are a proposal I have written up. For now they are applied
+          as skill prompting: written instructions that ask the AI to follow the
+          process. They have not been tested across teams, and there are no
+          metrics yet.
+        </p>
+        <p className="mt-3">
+          <strong className="font-semibold text-foreground">
+            Prompting versus harnesses.
+          </strong>{" "}
+          A harness is the tooling around the model that enforces the process
+          instead of asking for it: hooks that run tests and linters after every
+          change, permission rules, and required checks that block a change when
+          they fail. Guardrails are part of a harness. That enforcement is the
+          gap this proposal has not closed yet.
         </p>
       </aside>
 
