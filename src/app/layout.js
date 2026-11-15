@@ -37,7 +37,10 @@ export default function RootLayout({ children }) {
         <TerminalBackdrop />
         <div className="flex min-h-screen flex-col">
           <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 print:hidden">
-            <a href="/" className="text-xl font-bold tracking-tight">
+            <a
+              href="/"
+              className="logo-3d text-2xl font-extrabold tracking-tight"
+            >
               JOE.DEV
             </a>
 
