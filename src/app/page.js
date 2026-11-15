@@ -19,6 +19,8 @@ const JSON_LD = [
   },
 ];
 
+const COMPANIES = ["EnablesGroup", "Myridius", "Stratpoint"];
+
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl px-6 py-12">
@@ -70,6 +72,22 @@ export default function Home() {
             hello@getjoe.dev
           </a>
         </p>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">
+          Companies I&apos;ve Worked With
+        </h2>
+        <ul className="flex flex-wrap gap-3">
+          {COMPANIES.map((name) => (
+            <li
+              key={name}
+              className="rounded-full border border-line bg-card px-4 py-1.5 text-sm font-semibold text-foreground"
+            >
+              {name}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section>
