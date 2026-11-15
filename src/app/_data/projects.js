@@ -1,9 +1,10 @@
 export const PROJECTS = [
   {
-    title: "Platform-as-a-service",
-    description: "Building a low-code platform to help launch microservices.",
-    tags: ["Java", "PHP", "Systems"],
-    link: "https://github.com/palalabot/platform-as-a-service",
+    title: "ZulitLabs",
+    description:
+      "A small-service agency that maintains websites for clients from sari-sari stores to small enterprises.",
+    tags: ["Web", "Maintenance", "Small business"],
+    link: "https://zulitlabs.vercel.app/",
   },
   {
     title: "Bayanihan Scrum - Collaboration-First Workflow",
