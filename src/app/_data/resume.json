@@ -31,7 +31,16 @@
     },
     {
       "category": "Cloud & Data",
-      "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Snowflake", "Tableau"]
+      "items": [
+        "AWS",
+        "Linux",
+        "Docker",
+        "Kubernetes",
+        "Networking",
+        "CI/CD",
+        "Snowflake",
+        "Tableau"
+      ]
     },
     {
       "category": "Leadership",
