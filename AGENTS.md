@@ -8,10 +8,10 @@ Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript (
 
 ## Commands
 
-- `npm run dev`: dev server
-- `npm run build`: production build (run before committing)
-- `npm run lint`: Biome lint
-- `npm run format`: Prettier (2-space indent); `npm run format:check` to verify
+- `pnpm dev`: dev server
+- `pnpm build`: production build (run before committing)
+- `pnpm lint`: Biome lint
+- `pnpm format`: Prettier (2-space indent); `pnpm format:check` to verify
 
 ## Layout
 
@@ -28,6 +28,15 @@ Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript (
 - Keep the design minimal and readable. Use the theme tokens in `globals.css`, not hard-coded colors, except on the resume page, which is intentionally plain white.
 - No phone number or home address in `resume.json`. The file is served publicly.
 - Commits: short single-line messages, no body.
+
+## SEO
+
+- Main target is the name "Joe Palala". Brief: `seo-requirements.md`.
+- Each page needs its own `metadata` (title under 60 chars, name first; description under 155) and one `<h1>`.
+- New routes go in `src/app/sitemap.js`. JSON-LD lives in `page.js`; `robots.js` and `opengraph-image.js` are in `src/app`.
+- Content comes from `_data/` only. Never invent employers, dates, titles, stats or rankings.
+- Real HTML text, descriptive link text, no AI filler ("delve", "passionate"). No phone or address in JSON-LD either.
+- The terminal backdrop is client-only (`public/terminal.json`) so it stays out of the indexed HTML. Keep decorative text out of SSR.
 
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
