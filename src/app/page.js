@@ -110,19 +110,6 @@ export default function Home() {
             </a>
           ))}
         </div>
-
-        <ul className="mt-12 space-y-4">
-          {SECTIONS.map(([title, text, href]) => (
-            <li key={title}>
-              <a href={href} className="group block">
-                <span className="font-semibold text-foreground group-hover:text-accent group-hover:underline">
-                  {title}
-                </span>
-                <span className="block text-sm text-muted">{text}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="mb-20">
@@ -135,6 +122,21 @@ export default function Home() {
             >
               <p className="font-semibold text-foreground">{title}</p>
               <p className="mt-1 text-sm text-muted">{text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-20">
+        <ul className="space-y-4">
+          {SECTIONS.map(([title, text, href]) => (
+            <li key={title}>
+              <a href={href} className="group block">
+                <span className="font-semibold text-foreground group-hover:text-accent group-hover:underline">
+                  {title}
+                </span>
+                <span className="block text-sm text-muted">{text}</span>
+              </a>
             </li>
           ))}
         </ul>
