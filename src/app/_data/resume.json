@@ -1,13 +1,13 @@
 {
   "name": "Jose Palala",
-  "title": "Senior Full-Stack Engineer & Technical Lead",
+  "title": "Senior Full-Stack Engineer",
   "location": "Metro Manila, Philippines",
   "email": "joe@palala.dev",
   "links": [
     { "label": "GitHub", "url": "https://github.com/jpalala" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/joepalala" }
   ],
-  "summary": "Senior Full-Stack Engineer and Technical Lead with 19+ years of experience delivering SaaS, Shopify, HR, and financial systems. Leads teams, modernizes platforms, and turns business requirements into scalable technical solutions.",
+  "summary": "Senior Full-Stack Engineer with 19+ years of experience delivering SaaS, Shopify, HR, and financial systems. Modernizes platforms and turns business requirements into scalable technical solutions.",
   "skills": [
     {
       "category": "Languages",
@@ -43,9 +43,8 @@
       ]
     },
     {
-      "category": "Leadership",
+      "category": "Practices",
       "items": [
-        "Technical Leadership",
         "Mentoring",
         "Agile Delivery",
         "Solution Design",

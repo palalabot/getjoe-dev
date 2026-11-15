@@ -4,7 +4,7 @@ import resume from "../_data/resume.json";
 export const metadata = {
   title: "Joe Palala | Resume",
   description:
-    "Resume of Joe Palala, senior full-stack engineer and technical lead with 19+ years in Java, PHP and TypeScript.",
+    "Resume of Joe Palala, senior full-stack engineer with 19+ years in Java, PHP and TypeScript.",
   // Also covers /resume?download=1.
   alternates: { canonical: "/resume" },
 };
