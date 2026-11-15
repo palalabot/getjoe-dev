@@ -71,10 +71,6 @@ export default function Home() {
           >
             hello@getjoe.dev
           </a>
-          {" or "}
-          <a href="/contact" className="text-accent hover:underline">
-            use the contact form
-          </a>
         </p>
       </section>
 
