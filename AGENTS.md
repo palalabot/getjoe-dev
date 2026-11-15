@@ -18,6 +18,7 @@ Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript (
 - `src/app/page.js`: homepage, project cards from `_data/projects.js`
 - `src/app/resume/page.js`: one-page resume, rendered from `_data/resume.json`
 - `src/app/resume.json/route.js`: serves the same JSON at `/resume.json`
+- `src/app/ai-assisted-sdlc/page.js`: short summary of the AI-assisted SDLC approach, drawn from the Bayanihan page. Keep it consistent with that page and make no claims of results.
 - `src/app/_components/`: shared components (`ProjectCard`, `TerminalBackdrop`)
 - `src/app/globals.css`: theme tokens (light and dark) and print styles
 

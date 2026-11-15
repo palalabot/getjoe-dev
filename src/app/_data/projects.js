@@ -1,13 +1,13 @@
 export const PROJECTS = [
   {
-    title: "ZulitLabs",
+    title: "ZulitLabs (demo)",
     description:
-      "A small-service agency that maintains websites for clients from sari-sari stores to small enterprises.",
-    tags: ["Web", "Maintenance", "Small business"],
-    link: "https://zulitlabs.vercel.app/",
+      "A demo site for a small web maintenance service: static HTML, a Vercel function and a Turnstile-protected contact form that emails through Resend. Not an active business.",
+    tags: ["Demo", "Vanilla JS", "Vercel", "Resend"],
+    link: "https://www.zulitlabs.com/",
   },
   {
-    title: "Bayanihan Scrum - Collaboration-First Workflow",
+    title: "Bayanihan Scrum: AI-assisted SDLC Workflow",
     description:
       "Designed a collaboration-first team flow, with AI as an assistive tool, for scaled Agile teams.",
     tags: ["AI", "Product", "Governance"],

@@ -21,6 +21,21 @@ const JSON_LD = [
 
 const COMPANIES = ["EnablesGroup", "Myridius", "Stratpoint"];
 
+const SECTIONS = [
+  ["Resume", "My one-page CV, also available as JSON", "/resume"],
+  ["Projects", "Selected things I've built", "#projects"],
+  [
+    "AI-assisted SDLC",
+    "How I approach AI across the software lifecycle: specs, review, tests",
+    "/ai-assisted-sdlc",
+  ],
+  [
+    "Bayanihan Scrum",
+    "A collaboration-first, AI-assisted workflow I wrote up",
+    "/bayanihan",
+  ],
+];
+
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl px-6 py-12">
@@ -38,15 +53,14 @@ export default function Home() {
         </h1>
 
         <p className="text-lg leading-relaxed text-muted">
-          I architect scalable systems using{" "}
+          Hi, I&apos;m Joe, a senior full-stack engineer from Metro Manila. I
+          work in{" "}
           <strong className="font-semibold text-foreground">
-            Java, PHP, and TypeScript
-          </strong>
-          . Currently focused on{" "}
-          <strong className="font-semibold text-foreground">
-            Intentional Engineering
-          </strong>
-          : leveraging AI while keeping humans in control of critical systems.
+            Node.js, React, and some Java
+          </strong>{" "}
+          on e-commerce and SaaS systems. I focus on how teams build with AI
+          across the lifecycle: specs, design, review, testing and release, with
+          a person accountable at each step.
         </p>
 
         <p className="mt-4 text-base text-muted">
@@ -61,17 +75,38 @@ export default function Home() {
           .
         </p>
 
-        <p className="mt-6 text-sm">
-          <span className="mr-2 font-semibold uppercase tracking-[0.18em] text-muted">
-            Email
-          </span>
+        <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
           <a
             href="mailto:hello@getjoe.dev"
-            className="font-mono text-accent hover:underline"
+            className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition hover:opacity-90"
           >
-            hello@getjoe.dev
+            Email me
           </a>
-        </p>
+          {resume.links.map((l) => (
+            <a
+              key={l.label}
+              href={l.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted hover:text-accent hover:underline"
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
+
+        <ul className="mt-12 space-y-4">
+          {SECTIONS.map(([title, text, href]) => (
+            <li key={title}>
+              <a href={href} className="group block">
+                <span className="font-semibold text-foreground group-hover:text-accent group-hover:underline">
+                  {title}
+                </span>
+                <span className="block text-sm text-muted">{text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mb-20">
@@ -90,7 +125,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section>
+      <section id="projects" className="scroll-mt-8">
         <h2 className="mb-8 text-2xl font-bold text-foreground">
           Selected Projects
         </h2>
