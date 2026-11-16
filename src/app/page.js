@@ -89,6 +89,10 @@ export default function Home() {
           Read{" "}
           <a href="/resume" className="text-accent hover:underline">
             Joe Palala&apos;s resume
+          </a>{" "}
+          or{" "}
+          <a href="/blog" className="text-accent hover:underline">
+            read my blog
           </a>
           .
         </p>
