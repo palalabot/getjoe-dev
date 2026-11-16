@@ -171,6 +171,16 @@ export default function Home() {
 
       <section className="mb-20">
         <h2 className="mb-4 text-2xl font-bold text-foreground">Background</h2>
+        <p className="mb-6 max-w-3xl text-sm text-muted">
+          I held various roles in web development until 2020. The{" "}
+          <a
+            href="/resume"
+            className="text-accent underline underline-offset-2"
+          >
+            resume
+          </a>{" "}
+          is shortened to the recent ones, so this is the longer path.
+        </p>
         <ol className="max-w-3xl space-y-4 border-l border-line pl-5">
           {resume.background.map(({ title, period, text }) => (
             <li key={title}>
