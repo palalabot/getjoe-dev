@@ -56,6 +56,12 @@ export default function RootLayout({ children }) {
             </a>
 
             <div className="flex items-center gap-3">
+              <a
+                href="/blog"
+                className="text-sm font-medium text-muted transition hover:text-accent"
+              >
+                Blog
+              </a>
               <ThemeToggle />
               <a
                 href="/resume?download=1"
