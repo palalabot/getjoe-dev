@@ -77,26 +77,26 @@
   --logo-depth: #0f6b33;
 }
 
-/* Theme switcher: show the moon in light mode, the sun in dark mode. */
-.theme-toggle__sun {
+/* Theme switcher: a lightbulb in light mode, a streetlamp in dark mode. */
+.theme-toggle__streetlamp {
   display: none;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle__sun {
+  :root:not([data-theme="light"]) .theme-toggle__streetlamp {
     display: block;
   }
 
-  :root:not([data-theme="light"]) .theme-toggle__moon {
+  :root:not([data-theme="light"]) .theme-toggle__bulb {
     display: none;
   }
 }
 
-:root[data-theme="dark"] .theme-toggle__sun {
+:root[data-theme="dark"] .theme-toggle__streetlamp {
   display: block;
 }
 
-:root[data-theme="dark"] .theme-toggle__moon {
+:root[data-theme="dark"] .theme-toggle__bulb {
   display: none;
 }
 
@@ -256,23 +256,12 @@ body {
   }
 }
 
-/* Small screens: the window takes most of the width, with a gentler tilt. */
+/* Small screens: no terminal. It would sit under the page text and its
+   parallax distracts from reading. The scroll handler in TerminalBackdrop.jsx
+   returns early while it is hidden (offsetHeight is 0). */
 @media (max-width: 768px) {
   .terminal-backdrop {
-    top: 5.5rem;
-    right: 0.75rem;
-    left: 0.75rem;
-    width: auto;
-    height: 58vh;
-    box-shadow: 6px 6px 0 0 var(--win-depth);
-    transform: perspective(1000px) rotateX(4deg);
-    transform-origin: center top;
-  }
-
-  /* The page text sits on top of the window here, so keep the terminal faint. */
-  .terminal-backdrop__text {
-    opacity: 0.18;
-    filter: blur(1px);
+    display: none;
   }
 }
 

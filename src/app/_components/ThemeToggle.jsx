@@ -1,6 +1,6 @@
 "use client";
 
-// Sun/moon button in the nav. It flips `data-theme` on <html> and remembers
+// Lightbulb/streetlamp button in the nav. It flips `data-theme` on <html> and remembers
 // the choice. There is no React state: CSS shows the right icon for the active
 // theme, so the server and client HTML always match.
 export default function ThemeToggle() {
@@ -28,8 +28,9 @@ export default function ThemeToggle() {
       title="Switch theme"
       className="theme-toggle rounded-full border border-line bg-card p-2 text-foreground transition hover:border-accent hover:text-accent"
     >
+      {/* Light theme: a lightbulb. */}
       <svg
-        className="theme-toggle__moon"
+        className="theme-toggle__bulb"
         width="18"
         height="18"
         viewBox="0 0 24 24"
@@ -40,10 +41,12 @@ export default function ThemeToggle() {
         strokeLinejoin="round"
         aria-hidden="true"
       >
-        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+        <path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z" />
+        <path d="M9 19h6M10 22h4" />
       </svg>
+      {/* Dark theme: a streetlamp, lit. */}
       <svg
-        className="theme-toggle__sun"
+        className="theme-toggle__streetlamp"
         width="18"
         height="18"
         viewBox="0 0 24 24"
@@ -54,8 +57,10 @@ export default function ThemeToggle() {
         strokeLinejoin="round"
         aria-hidden="true"
       >
-        <circle cx="12" cy="12" r="4" />
-        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+        <path d="M8 21V8a4 4 0 0 1 4-4h2" />
+        <path d="M5 21h6" />
+        <path d="M14 3h6l-1.2 3.5h-3.6z" />
+        <path d="M17 10v2M13.6 9.6l-1.1 1.6M20.4 9.6l1.1 1.6" />
       </svg>
     </button>
   );
