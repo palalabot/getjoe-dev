@@ -256,6 +256,11 @@ body {
   }
 }
 
+/* Reading pages (blog) hide the terminal so it never sits under the text. */
+body:has(.hide-terminal) .terminal-backdrop {
+  display: none;
+}
+
 /* Small screens: no terminal. It would sit under the page text and its
    parallax distracts from reading. The scroll handler in TerminalBackdrop.jsx
    returns early while it is hidden (offsetHeight is 0). */
