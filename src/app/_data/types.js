@@ -55,3 +55,13 @@
  */
 
 export {};
+
+/**
+ * @typedef {object} BlogPost
+ * @property {string} slug URL part: /blog/<slug>.
+ * @property {string} title
+ * @property {string} description One sentence for the list and the meta description (under 155 characters).
+ * @property {string} date Publish date: YYYY-MM-DD, or YYYY-MM when only the month is known.
+ * @property {string[]} tags
+ * @property {(string | {heading: string} | {code: string, label?: string} | {callout: string})[]} body In order. A string is a paragraph (`backticks` make inline code, [text](url) a link), `heading` an h2, `code` a code block, `callout` a highlighted paragraph.
+ */
