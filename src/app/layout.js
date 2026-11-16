@@ -45,9 +45,18 @@ export default function RootLayout({ children }) {
               'try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}',
           }}
         />
+        <a
+          href="#content"
+          className="sr-only rounded-md bg-foreground px-4 py-2 text-background focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50"
+        >
+          Skip to content
+        </a>
         <TerminalBackdrop />
         <div className="flex min-h-screen flex-col">
-          <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 print:hidden">
+          <nav
+            aria-label="Main"
+            className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 print:hidden"
+          >
             <a
               href="/"
               className="logo-3d text-2xl font-extrabold tracking-tight"
@@ -66,7 +75,9 @@ export default function RootLayout({ children }) {
             </div>
           </nav>
 
-          <main className="flex-1">{children}</main>
+          <main id="content" tabIndex={-1} className="flex-1 outline-none">
+            {children}
+          </main>
 
           <footer className="px-6 py-12 text-center text-sm text-muted print:hidden">
             (c) {year} - Built with Next.js and Intentional Engineering
