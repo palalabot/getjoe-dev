@@ -175,7 +175,10 @@ export default function BayanihanPage() {
           software teams
         </p>
         <p className="mt-4 font-sans text-sm text-muted">
-          <a href="/" className="hover:text-accent">
+          <a
+            href="/"
+            className="underline underline-offset-2 hover:text-accent"
+          >
             Joe Palala
           </a>{" "}
           · Working paper · 2026
@@ -257,17 +260,30 @@ export default function BayanihanPage() {
           from the BMAD Method [6]. Every role has a human owner and an AI
           assistant, and the human is accountable.
         </p>
-        <div className="overflow-x-auto font-sans">
+        <section
+          aria-label="Table 1, scrollable"
+          // biome-ignore lint/a11y/noNoninteractiveTabindex: focusable so keyboard users can scroll the table sideways
+          tabIndex={0}
+          className="overflow-x-auto font-sans"
+        >
           <table className="w-full border-y border-line text-left text-sm">
             <caption className="mb-2 text-left text-muted">
               Table 1. What AI assists with, and what humans decide.
             </caption>
             <thead className="border-b border-line text-muted">
               <tr>
-                <th className="py-2 pr-3">Phase</th>
-                <th className="py-2 pr-3">Artifact</th>
-                <th className="py-2 pr-3">AI assists</th>
-                <th className="py-2">Humans decide</th>
+                <th scope="col" className="py-2 pr-3">
+                  Phase
+                </th>
+                <th scope="col" className="py-2 pr-3">
+                  Artifact
+                </th>
+                <th scope="col" className="py-2 pr-3">
+                  AI assists
+                </th>
+                <th scope="col" className="py-2">
+                  Humans decide
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -283,7 +299,7 @@ export default function BayanihanPage() {
               ))}
             </tbody>
           </table>
-        </div>
+        </section>
       </Section>
 
       <Section n="5" title="The Scrum Master's role">

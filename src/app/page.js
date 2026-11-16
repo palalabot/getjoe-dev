@@ -87,7 +87,10 @@ export default function Home() {
 
         <p className="mt-4 text-base text-muted">
           Read{" "}
-          <a href="/resume" className="text-accent hover:underline">
+          <a
+            href="/resume"
+            className="text-accent underline underline-offset-2"
+          >
             Joe Palala&apos;s resume
           </a>{" "}
           or{" "}
@@ -113,6 +116,7 @@ export default function Home() {
               className="text-sm text-muted hover:text-accent hover:underline"
             >
               {l.label}
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           ))}
         </div>
@@ -133,7 +137,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="mb-20">
+      <nav aria-label="On this site" className="mb-20">
         <ul className="space-y-4">
           {SECTIONS.map(([title, text, href]) => (
             <li key={title}>
@@ -146,7 +150,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </section>
+      </nav>
 
       <section className="mb-20">
         <h2 className="mb-4 text-2xl font-bold text-foreground">
@@ -167,6 +171,35 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">Background</h2>
+        <p className="mb-6 max-w-3xl text-sm text-muted">
+          I held various roles in web development until 2020. The{" "}
+          <a
+            href="/resume"
+            className="text-accent underline underline-offset-2"
+          >
+            resume
+          </a>{" "}
+          is shortened to the recent ones, so this is the longer path.
+        </p>
+        <ol className="max-w-3xl space-y-4 border-l border-line pl-5">
+          {resume.background.map(({ title, period, text }) => (
+            <li key={title}>
+              <p className="font-semibold text-foreground">
+                {title}
+                {period && (
+                  <span className="ml-2 text-sm font-normal text-muted">
+                    {period}
+                  </span>
+                )}
+              </p>
+              <p className="mt-1 text-sm text-muted">{text}</p>
+            </li>
+          ))}
+        </ol>
       </section>
 
       {PROJECT_GROUPS.map(([category, heading], i) => (

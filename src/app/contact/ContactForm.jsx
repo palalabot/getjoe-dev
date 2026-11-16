@@ -17,13 +17,20 @@ export default function ContactForm() {
       <form action={formAction} className="flex max-w-xl flex-col gap-4">
         <label className="text-sm font-semibold text-foreground">
           Name
-          <input name="name" required maxLength={200} className={FIELD} />
+          <input
+            name="name"
+            autoComplete="name"
+            required
+            maxLength={200}
+            className={FIELD}
+          />
         </label>
         <label className="text-sm font-semibold text-foreground">
           Email
           <input
             name="email"
             type="email"
+            autoComplete="email"
             required
             maxLength={200}
             className={FIELD}

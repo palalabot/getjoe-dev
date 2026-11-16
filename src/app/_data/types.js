@@ -39,6 +39,14 @@
  */
 
 /**
+ * One step of the career path on the homepage, oldest first.
+ * @typedef {object} BackgroundStep
+ * @property {string} title
+ * @property {string} [period] Only when the years are known.
+ * @property {string} text
+ */
+
+/**
  * Shape of `resume.json`. It is served publicly, so no phone or home address.
  * @typedef {object} Resume
  * @property {string} name
@@ -50,6 +58,7 @@
  * @property {SkillGroup[]} skills
  * @property {Job[]} experience
  * @property {string} earlier
+ * @property {BackgroundStep[]} background Shown on the homepage, not on the one-page resume.
  * @property {Education[]} education
  * @property {string[]} speaking
  */

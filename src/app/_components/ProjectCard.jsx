@@ -9,6 +9,9 @@ export default function ProjectCard({ title, description, tags, link }) {
         className={`mb-2 text-xl font-bold text-foreground ${link ? "group-hover:underline" : ""}`}
       >
         {title}
+        {link && !link.startsWith("/") && (
+          <span className="sr-only"> (opens in a new tab)</span>
+        )}
       </h3>
 
       <p className="mb-4 text-sm leading-6 text-muted">{description}</p>

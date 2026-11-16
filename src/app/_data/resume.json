@@ -112,6 +112,29 @@
     }
   ],
   "earlier": "Earlier: HeroTeams (Frontend Engineer), Willis Towers Watson (UI Developer), Cognizant (Full-Stack Node Developer), 2014–2022. Full history in the CV.",
+  "background": [
+    {
+      "title": "Infrastructure",
+      "period": "2007–2011",
+      "text": "Infrastructure work, with my start in web development."
+    },
+    {
+      "title": "PHP development",
+      "text": "Built bulletin boards and e-commerce systems on WooCommerce."
+    },
+    {
+      "title": "Node.js at Cognizant",
+      "text": "Moved from PHP to Node.js as a full-stack developer."
+    },
+    {
+      "title": "UI/UX at Willis Towers Watson",
+      "text": "A brief pause from development, in a UI/UX role."
+    },
+    {
+      "title": "Back to engineering",
+      "text": "Frontend at HeroTeams, then full-stack roles at Gappify, EnablesGroup, Myridius and Stratpoint."
+    }
+  ],
   "education": [
     {
       "degree": "BS Management Information Systems",
