@@ -1,6 +1,37 @@
 /** @type {import("./types").BlogPost[]} Newest first. */
 export const POSTS = [
   {
+    slug: "three-ai-skill-sets-to-install",
+    title: "Three AI skill sets worth installing",
+    description:
+      "Three open-source skill sets for AI coding agents, with links: Ponytail, Superpowers and Anthropic's own skills repository.",
+    date: "2026-07",
+    tags: ["AI", "Agent Skills", "Claude Code", "Open Source", "Dev Journey"],
+    body: [
+      "A skill is a folder with a `SKILL.md` file: plain instructions an AI coding agent loads when a task calls for them. There is no model training involved. You can open the file and read exactly what it tells the agent to do.",
+      "There are thousands of them now. These are three sets I would point a teammate to first, each with a link to its source.",
+      { heading: "1. Ponytail" },
+      "[Ponytail](https://github.com/DietrichGebert/ponytail) makes the agent work like a lazy senior developer: understand the problem, find the smallest correct change, and stop. It does not cut validation, error handling, security or accessibility.",
+      "It also comes with a review command and an audit command, and three levels: lite, full and ultra. In Claude Code it installs as a plugin:",
+      {
+        label: "Claude Code",
+        code: "/plugin marketplace add DietrichGebert/ponytail\n/plugin install ponytail@ponytail",
+      },
+      { heading: "2. Superpowers" },
+      "[Superpowers](https://github.com/obra/superpowers) is a set of skills about process. It pushes the agent to brainstorm and plan before writing code, to work test-first, and to debug in a methodical way instead of guessing.",
+      "Where Ponytail is about writing less, Superpowers is about working in the right order. The install steps are in its README.",
+      { heading: "3. Anthropic's skills repository" },
+      "[anthropics/skills](https://github.com/anthropics/skills) is the official collection from Anthropic. It covers document work (Word, PDF, PowerPoint and Excel files) and includes a skill for writing your own skills.",
+      "It is also the best place to learn the format. Read two or three of its `SKILL.md` files and you will know how to write one for your own team.",
+      { heading: "Read before you install" },
+      "A skill is a set of instructions your agent will follow, with access to your code and your terminal. Treat it like any other dependency: install from the original repository, not a copy, and read the files first.",
+      {
+        callout:
+          "Start with one. A skill that changes how the agent works on every task is easier to judge when it is the only thing you changed.",
+      },
+    ],
+  },
+  {
     slug: "env-files-in-spring-boot",
     title: "Using .env files in Java Spring Boot",
     description:
