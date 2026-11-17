@@ -2,31 +2,57 @@
 
 /** @typedef {{ ok: boolean, message: string }} ContactState */
 
-// Forwards every form field to CONTACT_API_URL (full endpoint URL, set in .env).
+// getjoe.dev must be a verified domain in Resend, or every send fails.
+const FROM = "Contact <contact@getjoe.dev>";
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Env vars (Vercel project settings, never in the repo):
+//   RESEND_API_KEY  Resend sending key
+//   CONTACT_TO      inbox that receives messages
+/**
+ * @param {FormDataEntryValue | null} v
+ * @param {number} max
+ */
+const field = (v, max) => (typeof v === "string" ? v.trim().slice(0, max) : "");
+
 /**
  * @param {ContactState | null} _prev
  * @param {FormData} formData
  * @returns {Promise<ContactState>}
  */
 export async function sendContact(_prev, formData) {
-  const url = process.env.CONTACT_API_URL;
-  if (!url) return { ok: false, message: "Contact form is not configured." };
+  const { RESEND_API_KEY, CONTACT_TO } = process.env;
+  if (!RESEND_API_KEY || !CONTACT_TO) {
+    return { ok: false, message: "Contact form is not configured." };
+  }
 
-  // Drop React's internal $ACTION_* fields.
-  const body = Object.fromEntries(
-    [...formData].filter(([key]) => !key.startsWith("$ACTION_")),
-  );
+  // Newlines stripped so the name cannot break the subject line.
+  const name = field(formData.get("name"), 200).replace(/[\r\n]+/g, " ");
+  const email = field(formData.get("email"), 200);
+  const message = field(formData.get("message"), 5000);
+  if (!name || !message || !EMAIL.test(email)) {
+    return {
+      ok: false,
+      message: "Enter your name, a valid email and a message.",
+    };
+  }
 
   try {
-    const res = await fetch(url, {
+    const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
         "Content-Type": "application/json",
-        "x-api-key": process.env.CONTACT_API_KEY ?? "",
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify({
+        from: FROM,
+        to: [CONTACT_TO],
+        reply_to: email,
+        subject: `Contact form: ${name}`,
+        text: `${name} <${email}>\n\n${message}`,
+      }),
     });
-    if (!res.ok) throw new Error(`API responded ${res.status}`);
+    if (!res.ok) throw new Error(`Resend responded ${res.status}`);
     return { ok: true, message: "Thanks, your message was sent." };
   } catch {
     return { ok: false, message: "Could not send your message. Try again." };

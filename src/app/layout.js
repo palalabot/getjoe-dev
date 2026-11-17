@@ -67,6 +67,12 @@ export default function RootLayout({ children }) {
             <div className="flex items-center gap-3">
               <ThemeToggle />
               <a
+                href="/contact"
+                className="rounded-full border border-foreground px-4 py-2 text-sm font-medium text-foreground transition hover:border-accent hover:text-accent"
+              >
+                Hire me
+              </a>
+              <a
                 href="/resume?download=1"
                 className="rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition hover:bg-accent"
               >

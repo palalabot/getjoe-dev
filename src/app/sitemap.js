@@ -2,10 +2,10 @@ import { POSTS } from "./_data/posts";
 
 /** @returns {import("next").MetadataRoute.Sitemap} */
 export default function sitemap() {
-  // Add "/contact" once the contact form is live.
   return [
     "",
     "/resume",
+    "/contact",
     "/bayanihan",
     "/ai-assisted-sdlc",
     "/blog",

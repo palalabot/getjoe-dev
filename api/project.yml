@@ -1,6 +1,0 @@
-packages:
-  - name: api
-    functions:
-      - name: contact
-        runtime: nodejs:18
-        web: true
