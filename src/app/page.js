@@ -1,6 +1,7 @@
 import ProjectCard from "./_components/ProjectCard";
 import { PROJECTS } from "./_data/projects";
 import resume from "./_data/resume.json";
+import { SERVICES } from "./_data/services";
 
 const JSON_LD = [
   {
@@ -47,15 +48,6 @@ const SECTIONS = [
 const PROJECT_GROUPS = [
   ["project", "Selected Projects"],
   ["hobby", "Hobbies"],
-];
-
-const SKILLS = [
-  [
-    "Full-stack development",
-    "Laravel, Next.js and Node.js on Shopify and SaaS systems, and other stacks when a project needs them",
-  ],
-  ["Linux and Docker", "Server setup, containers and deployments"],
-  ["Network setup", "Basic LAN setup: routers, Wi-Fi and pfSense"],
 ];
 
 export default function Home() {
@@ -125,10 +117,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-20">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">What I Do</h2>
-        <ul className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          {SKILLS.map(([title, text]) => (
+      <section id="services" className="mb-20 scroll-mt-8">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
+          <h2 className="text-2xl font-bold text-foreground">My Services</h2>
+          <a
+            href="/contact"
+            className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition hover:opacity-90"
+          >
+            Hire me
+          </a>
+        </div>
+        <p className="mb-6 max-w-3xl text-muted">
+          Available for contract work and full-time roles. Tell me what you need
+          built or fixed.
+        </p>
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {SERVICES.map(({ title, text }) => (
             <li
               key={title}
               className="rounded-lg border border-line bg-card p-5 backdrop-blur-sm"
