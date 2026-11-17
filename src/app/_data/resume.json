@@ -7,11 +7,11 @@
     { "label": "GitHub", "url": "https://github.com/palalabot" },
     { "label": "LinkedIn", "url": "https://linkedin.com/in/joepalala" }
   ],
-  "summary": "Senior Full-Stack Engineer with 19+ years of experience delivering SaaS, Shopify, HR, and financial systems. Modernizes platforms and turns business requirements into scalable technical solutions. Looking to grow into engineering management.",
+  "summary": "Senior full-stack engineer who works across the stack, from front end to the servers it runs on. Most at home in Laravel, Next.js and Node.js on SaaS, Shopify, HR and financial systems, much of it maintaining and modernizing existing platforms. Looking to grow into engineering management.",
   "skills": [
     {
       "category": "Languages",
-      "items": ["Java", "Python", "PHP", "TypeScript", "JavaScript"]
+      "items": ["PHP", "TypeScript", "JavaScript", "Python", "Java"]
     },
     {
       "category": "Frontend",
@@ -20,12 +20,12 @@
     {
       "category": "Backend",
       "items": [
-        "Spring Boot",
-        "Quarkus",
-        "Symfony",
         "Laravel",
+        "Symfony",
         "Node.js",
         "NestJS",
+        "Spring Boot",
+        "Quarkus",
         "REST APIs"
       ]
     },

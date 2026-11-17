@@ -4,7 +4,7 @@ import { formatDate, POSTS } from "../_data/posts";
 export const metadata = {
   title: "Joe Palala's Blog | Senior Full-Stack Engineer",
   description:
-    "Articles by Joe Palala, a senior full-stack engineer working with Java, PHP and TypeScript.",
+    "Articles by Joe Palala, a senior full-stack engineer working across front end, back end and servers.",
   alternates: { canonical: "/blog" },
   openGraph: { url: "/blog" },
 };

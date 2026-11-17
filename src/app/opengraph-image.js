@@ -23,7 +23,7 @@ export default function Image() {
         Senior Full-Stack Engineer
       </div>
       <div style={{ fontSize: 32, marginTop: 24, color: "#a3a3a3" }}>
-        Java · PHP · TypeScript
+        Front end · Back end · Servers
       </div>
     </div>,
     size,

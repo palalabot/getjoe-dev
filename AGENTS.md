@@ -1,6 +1,6 @@
 # getjoe.dev
 
-Personal portfolio site of Joe Palala, a senior full-stack engineer (Java, PHP, TypeScript). It shows selected projects and a one-page resume.
+Personal portfolio site of Joe Palala, a senior full-stack engineer who works across the stack (most at home in Laravel, Next.js and Node.js; not tied to one tool). It shows selected projects and a one-page resume.
 
 ## Stack
 
@@ -34,7 +34,7 @@ Next.js 16 (App Router, `src/app`), React 19, Tailwind CSS 4, plain JavaScript w
 
 ## SEO
 
-- Main target is the name "Joe Palala". Brief: `seo-requirements.md`.
+- Main target is the name "Joe Palala".
 - Each page needs its own `metadata` (title under 60 chars, name first; description under 155) and one `<h1>`.
 - New routes go in `src/app/sitemap.js`. JSON-LD lives in `page.js`; `robots.js` and `opengraph-image.js` are in `src/app`.
 - Content comes from `_data/` only. Never invent employers, dates, titles, stats or rankings.

@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 export const metadata = {
   title: "Contact Joe Palala | Senior Full-Stack Engineer",
   description:
-    "Send a message to Joe Palala, a senior full-stack engineer working with Java, PHP and TypeScript.",
+    "Send a message to Joe Palala, a senior full-stack engineer working across front end, back end and servers.",
   alternates: { canonical: "/contact" },
   openGraph: { url: "/contact" },
 };

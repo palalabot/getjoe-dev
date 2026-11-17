@@ -52,7 +52,7 @@ const PROJECT_GROUPS = [
 const SKILLS = [
   [
     "Full-stack development",
-    "Node.js and React, with some Java, on Shopify and SaaS systems",
+    "Laravel, Next.js and Node.js on Shopify and SaaS systems, and other stacks when a project needs them",
   ],
   ["Linux and Docker", "Server setup, containers and deployments"],
   ["Network setup", "Basic LAN setup: routers, Wi-Fi and pfSense"],
@@ -76,13 +76,16 @@ export default function Home() {
 
         <p className="text-lg leading-relaxed text-muted">
           Hi, I&apos;m Joe, a senior full-stack engineer from Metro Manila,
-          Philippines. I work in{" "}
+          Philippines. I work{" "}
           <strong className="font-semibold text-foreground">
-            Node.js, React, and some Java
-          </strong>{" "}
-          on Shopify and SaaS systems. I am also comfortable with Linux, Docker
-          and basic network setup. Agile and AI-assisted delivery are side
-          interests I research and write about.
+            across the stack
+          </strong>
+          : front end, back end, and the Linux servers and containers they run
+          on. I am most at home in Laravel, Next.js and Node.js, and I pick up
+          what a project needs, such as Java on a recent one. Much of my work
+          has been keeping existing systems running and modernizing them. Agile
+          and AI-assisted delivery are side interests I research and write
+          about.
         </p>
 
         <p className="mt-4 text-base text-muted">
