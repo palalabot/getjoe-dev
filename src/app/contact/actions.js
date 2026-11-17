@@ -5,6 +5,9 @@
 // getjoe.dev must be a verified domain in Resend, or every send fails.
 const FROM = "Contact <contact@getjoe.dev>";
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Spam filter: only .com/.ph domains, or Gmail/Yahoo/Outlook on any country TLD.
+const ALLOWED =
+  /@((gmail|yahoo|outlook)\.(co\.)?[a-z]{2,3}(\.[a-z]{2})?|[^\s@]+\.(com|ph))$/i;
 
 // Env vars (Vercel project settings, never in the repo):
 //   RESEND_API_KEY  Resend sending key
@@ -34,12 +37,18 @@ export async function sendContact(_prev, formData) {
   // Newlines stripped so the name cannot break the subject line.
   const name = field(formData.get("name"), 200).replace(/[\r\n]+/g, " ");
   const email = field(formData.get("email"), 200);
+  const subject = field(formData.get("subject"), 200).replace(/[\r\n]+/g, " ");
   const message = field(formData.get("message"), 5000);
   if (!name || !message || !EMAIL.test(email)) {
     return {
       ok: false,
       message: "Enter your name, a valid email and a message.",
     };
+  }
+
+  // Disallowed domain: pretend success, like the honeypot, so nothing is sent.
+  if (!ALLOWED.test(email)) {
+    return { ok: true, message: "Thanks, your message was sent." };
   }
 
   try {
@@ -53,7 +62,7 @@ export async function sendContact(_prev, formData) {
         from: FROM,
         to: [CONTACT_TO],
         reply_to: email,
-        subject: `Contact form: ${name}`,
+        subject: `Contact form: ${subject || name}`,
         text: `${name} <${email}>\n\n${message}`,
       }),
     });

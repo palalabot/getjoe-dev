@@ -11,6 +11,13 @@
  */
 
 /**
+ * @typedef {object} Service
+ * @property {string} title
+ * @property {string} text
+ * @property {string} subject Example subject shown as the contact form placeholder.
+ */
+
+/**
  * @typedef {object} ResumeLink
  * @property {string} label
  * @property {string} url

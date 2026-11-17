@@ -1,6 +1,7 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useState } from "react";
+import { SERVICES } from "../_data/services";
 import { sendContact } from "./actions";
 
 const FIELD =
@@ -8,6 +9,13 @@ const FIELD =
 
 export default function ContactForm() {
   const [state, formAction, pending] = useActionState(sendContact, null);
+  // Random pick after mount; the static HTML always gets the first one, so hydration matches.
+  const [placeholder, setPlaceholder] = useState(SERVICES[0].subject);
+  useEffect(() => {
+    setPlaceholder(
+      SERVICES[Math.floor(Math.random() * SERVICES.length)].subject,
+    );
+  }, []);
 
   return (
     <form action={formAction} className="flex max-w-xl flex-col gap-4">
@@ -37,6 +45,15 @@ export default function ContactForm() {
           autoComplete="email"
           required
           maxLength={200}
+          className={FIELD}
+        />
+      </label>
+      <label className="text-sm font-semibold text-foreground">
+        Subject
+        <input
+          name="subject"
+          maxLength={200}
+          placeholder={`e.g. ${placeholder}`}
           className={FIELD}
         />
       </label>
