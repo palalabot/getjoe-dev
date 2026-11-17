@@ -26,6 +26,11 @@ export async function sendContact(_prev, formData) {
     return { ok: false, message: "Contact form is not configured." };
   }
 
+  // Honeypot filled: pretend success so the bot moves on.
+  if (formData.get("website")) {
+    return { ok: true, message: "Thanks, your message was sent." };
+  }
+
   // Newlines stripped so the name cannot break the subject line.
   const name = field(formData.get("name"), 200).replace(/[\r\n]+/g, " ");
   const email = field(formData.get("email"), 200);

@@ -11,6 +11,14 @@ export default function ContactForm() {
 
   return (
     <form action={formAction} className="flex max-w-xl flex-col gap-4">
+      {/* Honeypot: hidden from people, bots fill it in. */}
+      <input
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-px w-px opacity-0"
+      />
       <label className="text-sm font-semibold text-foreground">
         Name
         <input
